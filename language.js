@@ -96,6 +96,14 @@
     link.title = 'niupancheng@163.com';
     link.setAttribute('aria-label', 'Email: niupancheng@163.com');
   });
+  const homeAside = document.querySelector('.home-intro>aside');
+  if (homeAside && !homeAside.querySelector('.home-sidebar-info')) {
+    const info = document.createElement('div');
+    info.className = 'home-sidebar-info';
+    info.innerHTML = `<strong>Pancheng Niu</strong><span>${chinese ? '硕士研究生' : 'Master’s Student'}</span><span>${chinese ? '成都信息工程大学应用数学学院' : 'School of Applied Mathematics<br>Chengdu University of Information Technology'}</span>`;
+    const avatar = homeAside.querySelector('.home-avatar');
+    if (avatar) avatar.insertAdjacentElement('afterend', info);
+  }
   const profileLinks = document.querySelector('.profile-links');
   if (profileLinks) {
     const profileEmail = profileLinks.querySelector('a[href^="mailto:"]');
