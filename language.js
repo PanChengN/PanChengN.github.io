@@ -1,4 +1,5 @@
 (() => {
+  document.body.classList.add('language-loading');
   const queryLanguage = new URLSearchParams(location.search).get('lang');
   if (queryLanguage) localStorage.setItem('site-language', queryLanguage);
   const chinese = (queryLanguage || localStorage.getItem('site-language') || 'en') === 'zh';
@@ -137,4 +138,5 @@
     });
     item.append(text);
   });
+  requestAnimationFrame(() => document.body.classList.remove('language-loading'));
 })();

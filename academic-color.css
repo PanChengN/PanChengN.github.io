@@ -1,5 +1,7 @@
 /* Final minimal monochrome theme. */
 .academic{min-height:100vh;background:#fff;color:#202020}
+.academic{opacity:1;transition:opacity .18s ease}
+.academic.language-loading{opacity:0}
 .academic .hero{background:transparent;border-top:1px solid #202020;padding-left:0;padding-right:0}
 .academic .hero:after{display:none}
 .academic .links{color:#3d3d3d}
