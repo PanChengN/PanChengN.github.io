@@ -67,7 +67,8 @@ body.academic:has(.home-intro) .home-intro>div .profile-role,
 body.academic:has(.home-intro) .home-intro>div .home-copy{margin-left:80px;max-width:calc(100% - 80px)}
 body.academic:has(.home-intro) .home-intro>div .home-copy{text-align:justify;text-justify:inter-word}
 body.academic:has(.home-intro) .home-intro>div .profile-role,
-body.academic:has(.home-intro) .home-intro>div .home-copy{margin-left:0;max-width:900px}
+body.academic:has(.home-intro) .home-intro>div .home-copy{margin-left:0;max-width:none}
+body.academic:has(.home-intro) .home-intro>div .profile-role{margin-left:0;max-width:none}
 @media(max-width:620px){
   .academic .home-section>article,
   .academic .home-section>p,
