@@ -4,6 +4,7 @@
   const chinese = (queryLanguage || localStorage.getItem('site-language') || 'en') === 'zh';
   document.querySelectorAll('a[href="contact.html"]').forEach((link) => link.remove());
   document.querySelectorAll('a[href="about.html"]').forEach((link) => link.remove());
+  document.querySelectorAll('a[href="experience.html"]').forEach((link) => { link.textContent = chinese ? '教育' : 'Education'; });
   const replacements = [
     ['关于我', 'About'], ['关于', 'About'], ['此刻', 'Now'], ['项目', 'Publications'], ['笔记', 'Notes'], ['经历与教育', 'Experience & Education'], ['经历', 'Experience'], ['教育', 'Education'], ['联系我', 'Contact'], ['联系', 'Contact'],
     ['我是一名大数据与人工智能方向的硕士研究生，研究兴趣包括物理信息神经网络（PINNs）、神经算子，以及科学机器学习。', 'I am a master’s student in Big Data and Artificial Intelligence. My interests include Physics-Informed Neural Networks (PINNs), Neural Operators, and scientific machine learning.'],
