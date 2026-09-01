@@ -36,6 +36,7 @@
     document.documentElement.lang = 'zh-CN';
   }
   if (location.pathname.endsWith('index.html')) {
+    document.querySelector('.home-news')?.remove();
     const outputHeading = document.querySelector('.home-section h2');
     if (outputHeading && (outputHeading.textContent.includes('Selected Publications') || outputHeading.textContent.includes('代表论文'))) {
       outputHeading.textContent = chinese ? '研究成果' : 'Research Outputs';
