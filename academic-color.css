@@ -34,3 +34,19 @@
 .academic .now-grid p{display:grid;grid-template-columns:88px 105px minmax(0,1fr);gap:16px;align-items:baseline;white-space:nowrap}.academic .now-grid .now-date{display:block;margin:0;color:#777;font:11px 'IBM Plex Mono',monospace}.academic .now-grid .now-text{font-size:16px;line-height:1.8}
 @media(max-width:620px){.academic .now-grid p{grid-template-columns:72px 1fr;gap:5px 12px;white-space:normal}.academic .now-grid .now-text{grid-column:2}}
 .academic .page-section .now-grid{max-width:1100px;width:88%;margin-left:0}
+
+/* Give education entries more breathing room between the date and details. */
+.academic .page-section > article:not(.publication-list article){
+  grid-template-columns:130px minmax(0,1fr);
+  column-gap:28px;
+  padding-top:24px;
+  padding-bottom:24px;
+}
+@media(max-width:620px){
+  .academic .page-section > article:not(.publication-list article){
+    grid-template-columns:92px minmax(0,1fr);
+    column-gap:18px;
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+}
