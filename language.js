@@ -101,4 +101,13 @@
       profileLinks.append(cv);
     }
   }
+  document.querySelectorAll('.home-news>p').forEach((item) => {
+    if (item.querySelector('.news-text')) return;
+    const text = document.createElement('span');
+    text.className = 'news-text';
+    Array.from(item.childNodes).forEach((node) => {
+      if (!(node.nodeType === Node.ELEMENT_NODE && node.tagName === 'TIME')) text.append(node);
+    });
+    item.append(text);
+  });
 })();
