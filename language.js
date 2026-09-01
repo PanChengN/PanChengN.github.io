@@ -34,6 +34,12 @@
     ? '硕士研究生 · 成都信息工程大学应用数学学院'
     : 'Master’s Student · School of Applied Mathematics, Chengdu University of Information Technology';
   document.querySelectorAll('.role, .profile-role').forEach((item) => { item.textContent = affiliation; });
+  if (location.pathname.endsWith('projects.html')) {
+    const firstProject = document.querySelector('.page-section article');
+    if (firstProject) {
+      firstProject.innerHTML = `<time>2025</time><div><b><a href="https://doi.org/10.1016/j.neucom.2025.130167" target="_blank" rel="noopener noreferrer">Improved physics-informed neural network in mitigating gradient-related failures ↗</a></b><p><em>Neurocomputing</em>, 638, 130167 · 2025</p><p>${chinese ? '第一作者 · 提出 I-PINN，以缓解 PINN 中的梯度流刚性问题并提升预测精度。' : 'First author · Proposes I-PINN to mitigate gradient-flow stiffness in PINNs and improve predictive accuracy.'}　<a href="https://github.com/PanChengN/I-PINN" target="_blank" rel="noopener noreferrer">${chinese ? '代码 ↗' : 'Code ↗'}</a></p></div>`;
+    }
+  }
   document.querySelectorAll('a').forEach((link) => {
     if (link.textContent.includes('GitHub')) {
       link.href = 'https://github.com/PanChengN';
