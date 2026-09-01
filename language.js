@@ -52,6 +52,17 @@
     });
     nav.append(button);
   }
+  if (location.pathname.endsWith('index.html') || location.pathname.endsWith('/')) {
+    const main = document.querySelector('main');
+    const intro = document.querySelector('.home-intro');
+    if (main && intro && !main.querySelector('.home-now-preview')) {
+      const now = document.createElement('section');
+      now.className = 'home-section home-preview home-now-preview';
+      now.innerHTML = `<h2>${chinese ? '此刻' : 'Now'}</h2><p><time>2026</time>　${chinese ? '研究物理信息神经网络、神经算子与科学机器学习。' : 'Researching Physics-Informed Neural Networks, Neural Operators, and scientific machine learning.'}</p><p><time>Current</time>　${chinese ? '就读于成都信息工程大学应用数学学院。' : 'Master’s student at the School of Applied Mathematics, Chengdu University of Information Technology.'}</p><a class="home-more" href="now.html">${chinese ? '查看当前状态 →' : 'View current focus →'}</a>`;
+      intro.insertAdjacentElement('afterend', now);
+    }
+    document.querySelectorAll('.home-section').forEach((section) => section.classList.add('home-preview'));
+  }
   const affiliation = chinese
     ? '硕士研究生 · 成都信息工程大学应用数学学院'
     : 'Master’s Student · School of Applied Mathematics, Chengdu University of Information Technology';
