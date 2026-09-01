@@ -76,9 +76,11 @@
   if (profileLinks) {
     const profileEmail = profileLinks.querySelector('a[href^="mailto:"]');
     if (profileEmail) profileEmail.innerHTML = `<span class="email-icon">✉</span><span>${chinese ? '邮箱' : 'Email'}</span>`;
-    const cv = document.createElement('span');
-    cv.className = 'cv-placeholder';
-    cv.textContent = chinese ? '↓　简历 · 即将上传' : '↓　CV · Coming soon';
-    profileLinks.append(cv);
+    if (!profileLinks.querySelector('.cv-placeholder')) {
+      const cv = document.createElement('span');
+      cv.className = 'cv-placeholder';
+      cv.textContent = chinese ? '↓　简历 · 即将上传' : '↓　CV · Coming soon';
+      profileLinks.append(cv);
+    }
   }
 })();
