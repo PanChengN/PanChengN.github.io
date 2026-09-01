@@ -1,8 +1,6 @@
 (() => {
   document.body.classList.add('language-loading');
-  const queryLanguage = new URLSearchParams(location.search).get('lang');
-  if (queryLanguage) localStorage.setItem('site-language', queryLanguage);
-  const chinese = (queryLanguage || localStorage.getItem('site-language') || 'en') === 'zh';
+  const chinese = false;
   document.querySelectorAll('a[href="contact.html"]').forEach((link) => link.remove());
   document.querySelectorAll('a[href="about.html"]').forEach((link) => link.remove());
   document.querySelectorAll('a[href="experience.html"]').forEach((link) => { link.textContent = chinese ? '教育' : 'Education'; });
@@ -68,16 +66,6 @@
       home.textContent = chinese ? '主页' : 'Homepage';
       nav.prepend(home);
     }
-    const button = document.createElement('button');
-    button.className = 'lang-toggle';
-    button.textContent = chinese ? 'EN' : '中文';
-    button.addEventListener('click', () => {
-      localStorage.setItem('site-language', chinese ? 'en' : 'zh');
-      const url = new URL(location.href);
-      url.searchParams.delete('lang');
-      location.href = url.toString();
-    });
-    nav.append(button);
   }
   if (location.pathname.endsWith('index.html') || location.pathname.endsWith('/')) {
     const main = document.querySelector('main');
