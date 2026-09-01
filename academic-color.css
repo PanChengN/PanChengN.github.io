@@ -60,6 +60,8 @@ body.academic:has(.home-intro) .home-section{grid-column:2}
 body.academic:has(.home-intro) .home-section{width:100%;max-width:none}
 body.academic:has(.home-intro) .home-intro>div{padding:70px 0 65px;border-top:1px solid #202020}
 body.academic:has(.home-intro) .home-intro>div .kicker{margin-top:0}
+body.academic:has(.home-intro) .home-intro>div .profile-role,
+body.academic:has(.home-intro) .home-intro>div .home-copy{margin-left:205px;max-width:calc(100% - 205px)}
 @media(max-width:620px){
   .academic .home-section>article,
   .academic .home-section>p,
@@ -74,6 +76,8 @@ body.academic:has(.home-intro) .home-intro>div .kicker{margin-top:0}
   body.academic:has(.home-intro) .home-intro>aside,
   body.academic:has(.home-intro) .home-intro>div{grid-column:auto;grid-row:auto;padding-top:0}
   body.academic:has(.home-intro) .home-intro>aside{position:static}
+  body.academic:has(.home-intro) .home-intro>div .profile-role,
+  body.academic:has(.home-intro) .home-intro>div .home-copy{margin-left:0;max-width:900px}
 }
 @media (min-width:621px) and (max-width:900px){
   .academic .home-section>article,
