@@ -42,6 +42,17 @@
       outputHeading.textContent = chinese ? '研究成果' : 'Research Outputs';
     }
   }
+  if (location.pathname.endsWith('index.html')) {
+    const copy = document.querySelectorAll('.home-copy');
+    const intro = chinese
+      ? '我是一名就读于成都信息工程大学应用数学学院大数据技术与工程专业的硕士研究生。我的研究兴趣包括物理信息神经网络、神经算子与科学机器学习。'
+      : 'I am a master’s student in Big Data Technology and Engineering at the School of Applied Mathematics, Chengdu University of Information Technology. My broader interests include Physics-Informed Neural Networks, Neural Operators, and scientific machine learning.';
+    const focus = chinese
+      ? '在应用方面，我目前主要关注托卡马克核聚变装置中弹丸注入与磁流体力学之间的耦合建模。我希望以踏实而持续的探索，为科学计算中更加可靠、高效的学习型方法贡献一些力量。'
+      : 'In terms of applications, my current focus is on modeling the coupling between pellet injection and magnetohydrodynamics in tokamak fusion devices. I hope to contribute, in a small way, to more reliable and efficient learning-based approaches for scientific computing.';
+    if (copy[0]) copy[0].textContent = intro;
+    if (copy[1]) copy[1].textContent = focus;
+  }
   if (location.pathname.endsWith('now.html')) {
     const nowGrid = document.querySelector('.now-grid');
     if (nowGrid) nowGrid.innerHTML = chinese
