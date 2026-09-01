@@ -1,5 +1,7 @@
 (() => {
-  const chinese = new URLSearchParams(location.search).get('lang') === 'zh';
+  const queryLanguage = new URLSearchParams(location.search).get('lang');
+  if (queryLanguage) localStorage.setItem('site-language', queryLanguage);
+  const chinese = (queryLanguage || localStorage.getItem('site-language') || 'en') === 'zh';
   const replacements = [
     ['关于我', 'About'], ['关于', 'About'], ['此刻', 'Now'], ['项目', 'Projects'], ['笔记', 'Notes'], ['经历与教育', 'Experience & Education'], ['经历', 'Experience'], ['联系我', 'Contact'], ['联系', 'Contact'],
     ['我是一名大数据与人工智能方向的硕士研究生，研究兴趣包括物理信息神经网络（PINNs）、神经算子，以及科学机器学习。', 'I am a master’s student in Big Data and Artificial Intelligence. My interests include Physics-Informed Neural Networks (PINNs), Neural Operators, and scientific machine learning.'],
@@ -24,8 +26,9 @@
     button.className = 'lang-toggle';
     button.textContent = chinese ? 'EN' : '中文';
     button.addEventListener('click', () => {
+      localStorage.setItem('site-language', chinese ? 'en' : 'zh');
       const url = new URL(location.href);
-      if (chinese) url.searchParams.delete('lang'); else url.searchParams.set('lang', 'zh');
+      url.searchParams.delete('lang');
       location.href = url.toString();
     });
     nav.append(button);
