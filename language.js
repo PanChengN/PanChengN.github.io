@@ -20,8 +20,27 @@
     document.body.innerHTML = markup;
     document.documentElement.lang = 'en';
   }
+  if (chinese && location.pathname.endsWith('index.html')) {
+    const homeTranslations = [
+      ['Homepage', '主页'], ['About', '关于'], ['Now', '此刻'], ['Projects', '项目'], ['Notes', '笔记'], ['Experience', '经历'], ['Contact', '联系'],
+      ['WELCOME / 2026', '欢迎 / 2026'], ['Master’s Student · School of Applied Mathematics, Chengdu University of Information Technology', '硕士研究生 · 成都信息工程大学应用数学学院'],
+      ['I am a master’s student working at the intersection of applied mathematics and artificial intelligence. My research focuses on Physics-Informed Neural Networks, Neural Operators, and scientific machine learning for solving complex physical systems.', '我是一名应用数学与人工智能交叉方向的硕士研究生，研究聚焦物理信息神经网络、神经算子以及用于复杂物理系统求解的科学机器学习。'],
+      ['I am interested in building more accurate, stable, and efficient learning-based PDE solvers through architecture and optimization design.', '我关注通过网络架构与优化方法设计，构建更准确、稳定且高效的学习型偏微分方程求解器。'],
+      ['Selected Publications', '代表论文'], ['News', '动态'], ['View all projects →', '查看全部项目 →'], ['Our ACR-PINN work is available on arXiv.', 'ACR-PINN 工作已发布于 arXiv。'], ['I-PINN was published in ', 'I-PINN 已发表于 '], ['CV · Coming soon', '简历 · 即将上传']
+    ];
+    let markup = document.body.innerHTML;
+    homeTranslations.sort((a, b) => b[0].length - a[0].length).forEach(([en, zh]) => { markup = markup.split(en).join(zh); });
+    document.body.innerHTML = markup;
+    document.documentElement.lang = 'zh-CN';
+  }
   const nav = document.querySelector('nav');
   if (nav) {
+    if (!nav.querySelector('a[href="index.html"]')) {
+      const home = document.createElement('a');
+      home.href = 'index.html';
+      home.textContent = chinese ? '主页' : 'Homepage';
+      nav.prepend(home);
+    }
     const button = document.createElement('button');
     button.className = 'lang-toggle';
     button.textContent = chinese ? 'EN' : '中文';
