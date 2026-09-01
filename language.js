@@ -36,8 +36,8 @@
   if (location.pathname.endsWith('now.html')) {
     const nowGrid = document.querySelector('.now-grid');
     if (nowGrid) nowGrid.innerHTML = chinese
-      ? '<p><time class="now-date">2026.09</time><span>正在研究</span>托卡马克装置中核聚变反应的弹丸注入–磁流体力学（MHD）耦合模型。</p>'
-      : '<p><time class="now-date">2026.09</time><span>Researching</span> A coupled pellet-injection–magnetohydrodynamic (MHD) model for nuclear fusion reactions in tokamak devices.</p>';
+      ? '<p><time class="now-date">2026.09</time><span>正在研究</span><span class="now-text">托卡马克装置中核聚变反应的弹丸注入–磁流体力学（MHD）耦合模型。</span></p>'
+      : '<p><time class="now-date">2026.09</time><span>Researching</span><span class="now-text">A coupled pellet-injection–magnetohydrodynamic (MHD) model for nuclear fusion reactions in tokamak devices.</span></p>';
   }
   const nav = document.querySelector('nav');
   if (nav) {
