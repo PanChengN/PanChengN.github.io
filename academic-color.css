@@ -41,6 +41,12 @@
 .academic .home-now-preview>p{display:grid;grid-template-columns:105px minmax(0,1fr);column-gap:20px;align-items:baseline}
 .academic .home-now-preview>p time{display:block}
 .academic .home-news>p{display:grid;grid-template-columns:105px minmax(0,1fr);column-gap:20px;align-items:baseline}
+.academic .home-section>article,
+.academic .home-section>p,
+.academic .home-section>.home-more{margin-left:80px}
+.academic .home-section>article{grid-template-columns:90px minmax(0,1fr);column-gap:18px}
+.academic .home-now-preview>p,.academic .home-news>p{grid-template-columns:90px minmax(0,1fr);column-gap:18px}
+.academic .home-section article b{font-size:16px;line-height:1.45}
 @media(max-width:620px){
   .academic .home-section>article,
   .academic .home-section>p,
