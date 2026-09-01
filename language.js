@@ -34,6 +34,12 @@
     document.body.innerHTML = markup;
     document.documentElement.lang = 'zh-CN';
   }
+  if (location.pathname.endsWith('index.html')) {
+    const outputHeading = document.querySelector('.home-section h2');
+    if (outputHeading && (outputHeading.textContent.includes('Selected Publications') || outputHeading.textContent.includes('代表论文'))) {
+      outputHeading.textContent = chinese ? '研究成果' : 'Research Outputs';
+    }
+  }
   if (location.pathname.endsWith('now.html')) {
     const nowGrid = document.querySelector('.now-grid');
     if (nowGrid) nowGrid.innerHTML = chinese
