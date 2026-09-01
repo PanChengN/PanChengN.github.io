@@ -73,7 +73,7 @@
     if (main && intro && !main.querySelector('.home-now-preview')) {
       const now = document.createElement('section');
       now.className = 'home-section home-preview home-now-preview';
-      now.innerHTML = `<h2>${chinese ? '此刻' : 'Now'}</h2><p><time>2026.09</time>　${chinese ? '正在研究托卡马克装置中核聚变反应的弹丸注入–磁流体力学（MHD）耦合模型。' : 'Investigating a coupled pellet-injection–magnetohydrodynamic (MHD) model for nuclear fusion reactions in tokamak devices.'}</p><a class="home-more" href="now.html">${chinese ? '查看当前状态 →' : 'View current focus →'}</a>`;
+      now.innerHTML = `<h2>${chinese ? '此刻' : 'Now'}</h2><p><time>2026.09</time>${chinese ? '正在研究托卡马克装置中核聚变反应的弹丸注入–磁流体力学（MHD）耦合模型。' : 'Investigating a coupled pellet-injection–magnetohydrodynamic (MHD) model for nuclear fusion reactions in tokamak devices.'}</p><a class="home-more" href="now.html">${chinese ? '查看当前状态 →' : 'View current focus →'}</a>`;
       intro.insertAdjacentElement('afterend', now);
     }
     document.querySelectorAll('.home-section').forEach((section) => section.classList.add('home-preview'));
