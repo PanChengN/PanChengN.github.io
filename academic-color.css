@@ -31,5 +31,5 @@
 .academic header nav{gap:23px}.academic header nav a{font-size:15px}.academic .home-intro h1{font-size:clamp(44px,5.3vw,66px)}
 .academic .home-section h2{font-size:16px;letter-spacing:-.02em;color:#555;margin-bottom:26px}
 .academic .home-preview article:nth-of-type(n+4),.academic .home-preview p:nth-of-type(n+4){display:none}
-.academic .now-grid p{display:grid;grid-template-columns:88px 105px minmax(0,1fr);gap:16px;align-items:baseline}.academic .now-grid .now-date{display:block;margin:0;color:#777;font:11px 'IBM Plex Mono',monospace}.academic .now-grid .now-text{font-size:16px;line-height:1.8}
-@media(max-width:620px){.academic .now-grid p{grid-template-columns:72px 1fr;gap:5px 12px}.academic .now-grid .now-text{grid-column:2}}
+.academic .now-grid p{display:grid;grid-template-columns:88px 105px minmax(0,1fr);gap:16px;align-items:baseline;white-space:nowrap}.academic .now-grid .now-date{display:block;margin:0;color:#777;font:11px 'IBM Plex Mono',monospace}.academic .now-grid .now-text{font-size:16px;line-height:1.8}
+@media(max-width:620px){.academic .now-grid p{grid-template-columns:72px 1fr;gap:5px 12px;white-space:normal}.academic .now-grid .now-text{grid-column:2}}
