@@ -36,8 +36,8 @@
   if (location.pathname.endsWith('now.html')) {
     const nowGrid = document.querySelector('.now-grid');
     if (nowGrid) nowGrid.innerHTML = chinese
-      ? '<p><span>正在研究</span>托卡马克装置中核聚变反应的弹丸注入–磁流体力学（MHD）耦合模型。</p><p><span>研究方向</span>物理信息神经网络、神经算子与科学机器学习。</p><p><span>开放合作</span>科学计算与偏微分方程机器学习方法。</p>'
-      : '<p><span>Researching</span> A coupled pellet-injection–magnetohydrodynamic (MHD) model for nuclear fusion reactions in tokamak devices.</p><p><span>Research interests</span> Physics-Informed Neural Networks, Neural Operators, and scientific machine learning.</p><p><span>Open to collaboration</span> Scientific computing and machine-learning methods for partial differential equations.</p>';
+      ? '<p><span>正在研究</span>托卡马克装置中核聚变反应的弹丸注入–磁流体力学（MHD）耦合模型。</p>'
+      : '<p><span>Researching</span> A coupled pellet-injection–magnetohydrodynamic (MHD) model for nuclear fusion reactions in tokamak devices.</p>';
   }
   const nav = document.querySelector('nav');
   if (nav) {
@@ -64,7 +64,7 @@
     if (main && intro && !main.querySelector('.home-now-preview')) {
       const now = document.createElement('section');
       now.className = 'home-section home-preview home-now-preview';
-      now.innerHTML = `<h2>${chinese ? '此刻' : 'Now'}</h2><p><time>2026.09</time>　${chinese ? '正在研究托卡马克装置中核聚变反应的弹丸注入–磁流体力学（MHD）耦合模型。' : 'Investigating a coupled pellet-injection–magnetohydrodynamic (MHD) model for nuclear fusion reactions in tokamak devices.'}</p><p><time>Focus</time>　${chinese ? '物理信息神经网络、神经算子与科学机器学习。' : 'Physics-Informed Neural Networks, Neural Operators, and scientific machine learning.'}</p><a class="home-more" href="now.html">${chinese ? '查看当前状态 →' : 'View current focus →'}</a>`;
+      now.innerHTML = `<h2>${chinese ? '此刻' : 'Now'}</h2><p><time>2026.09</time>　${chinese ? '正在研究托卡马克装置中核聚变反应的弹丸注入–磁流体力学（MHD）耦合模型。' : 'Investigating a coupled pellet-injection–magnetohydrodynamic (MHD) model for nuclear fusion reactions in tokamak devices.'}</p><a class="home-more" href="now.html">${chinese ? '查看当前状态 →' : 'View current focus →'}</a>`;
       intro.insertAdjacentElement('afterend', now);
     }
     document.querySelectorAll('.home-section').forEach((section) => section.classList.add('home-preview'));
