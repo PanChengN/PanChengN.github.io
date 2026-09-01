@@ -3,7 +3,7 @@
   if (queryLanguage) localStorage.setItem('site-language', queryLanguage);
   const chinese = (queryLanguage || localStorage.getItem('site-language') || 'en') === 'zh';
   const replacements = [
-    ['关于我', 'About'], ['关于', 'About'], ['此刻', 'Now'], ['项目', 'Projects'], ['笔记', 'Notes'], ['经历与教育', 'Experience & Education'], ['经历', 'Experience'], ['联系我', 'Contact'], ['联系', 'Contact'],
+    ['关于我', 'About'], ['关于', 'About'], ['此刻', 'Now'], ['项目', 'Publications'], ['笔记', 'Notes'], ['经历与教育', 'Experience & Education'], ['经历', 'Experience'], ['联系我', 'Contact'], ['联系', 'Contact'],
     ['我是一名大数据与人工智能方向的硕士研究生，研究兴趣包括物理信息神经网络（PINNs）、神经算子，以及科学机器学习。', 'I am a master’s student in Big Data and Artificial Intelligence. My interests include Physics-Informed Neural Networks (PINNs), Neural Operators, and scientific machine learning.'],
     ['我目前是成都信息工程大学（Chengdu University of Information Technology, CUIT）大数据与人工智能方向的硕士研究生。', 'I am a master’s student in Big Data and Artificial Intelligence at Chengdu University of Information Technology (CUIT).'],
     ['我的研究兴趣包括物理信息神经网络（Physics-Informed Neural Networks, PINNs）、神经算子（Neural Operators）与科学机器学习，希望探索深度学习方法在复杂物理系统建模与求解中的应用。', 'My research interests include Physics-Informed Neural Networks (PINNs), Neural Operators, and scientific machine learning. I explore deep-learning methods for modeling and solving complex physical systems.'],
