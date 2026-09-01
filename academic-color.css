@@ -29,3 +29,4 @@
 .academic .publications h1{font-size:clamp(42px,5.5vw,58px);margin-bottom:24px}.academic .pub-legend{margin:-4px 0 18px;gap:8px}.academic .pub-legend .pub-tag{font-size:11px;padding:1px 6px}.academic .legend-code-tag{background:#226ab1}.academic .pub-title{font-size:18px}
 .academic .pub-legend{display:flex;gap:9px;align-items:center;margin:-18px 0 26px;font:12px 'IBM Plex Mono',monospace;color:#777}.academic .pub-legend b{font-weight:500}.academic .legend-preprint{color:#20a95d}.academic .legend-published{color:#a87c10}.academic .legend-code{color:#226ab1}
 .academic header nav{gap:23px}.academic header nav a{font-size:15px}.academic .home-intro h1{font-size:clamp(44px,5.3vw,66px)}
+.academic .home-section h2{font-size:16px;letter-spacing:-.02em;color:#555;margin-bottom:26px}
