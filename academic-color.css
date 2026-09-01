@@ -55,6 +55,7 @@ body.academic:has(.home-intro) .home-intro>aside{grid-column:1;grid-row:2 / span
 body.academic:has(.home-intro) .home-intro>aside{position:sticky;top:96px}
 body.academic:has(.home-intro) .home-intro>div{grid-column:2;grid-row:2}
 body.academic:has(.home-intro) .home-section{grid-column:2}
+body.academic:has(.home-intro) .home-section{width:100%;max-width:none}
 body.academic:has(.home-intro) .home-intro>div{padding:70px 0 65px;border-top:1px solid #202020}
 body.academic:has(.home-intro) .home-intro>div .kicker{margin-top:0}
 @media(max-width:620px){
