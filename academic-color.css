@@ -1,0 +1,24 @@
+/* Final minimal monochrome theme. */
+.academic{min-height:100vh;background:#fff;color:#202020}
+.academic .hero{background:transparent;border-top:1px solid #202020;padding-left:0;padding-right:0}
+.academic .hero:after{display:none}
+.academic .links{color:#3d3d3d}
+.academic article{padding-left:0;padding-right:0;background:transparent!important}
+.academic .kicker,.academic h2,.academic time,.academic footer{color:#777}
+.academic section:not(.hero),.academic article,.academic .note,.academic footer{border-color:#ddd}
+.academic main{min-height:100vh}
+.academic .page-section{min-height:calc(100vh - 90px);padding:88px 0 80px;border-top:1px solid #202020}.academic .page-section h1{font-size:clamp(42px,7vw,68px);letter-spacing:-.06em;margin:12px 0 38px}.academic .page-section>p:not(.kicker):not(.note){font-size:18px;line-height:2;max-width:680px}.academic .page-section .now-grid{max-width:680px}.academic .page-section article{max-width:680px}
+.academic .profile-page{display:grid;grid-template-columns:250px minmax(0,1fr);gap:74px;min-height:calc(100vh - 90px);padding:72px 0;border-top:1px solid #202020}.academic .photo-placeholder{width:220px;aspect-ratio:1;background:linear-gradient(140deg,#eeeee9,#d7d7d0);border-radius:50%;border:9px solid #f7f7f4;box-shadow:0 0 0 1px #d5d5cf;display:grid;place-items:center;color:#777;text-align:center;font:13px/1.5 'IBM Plex Mono',monospace}.academic .profile-links{display:grid;gap:13px;margin-top:36px}.academic .profile-links a{color:#222;text-decoration:none;font-size:15px}.academic .profile-links a:hover{text-decoration:underline;text-underline-offset:4px}.academic .profile-content{max-width:630px}.academic .profile-content h1{font-size:clamp(42px,7vw,70px);letter-spacing:-.065em;line-height:1;margin:12px 0 20px}.academic .profile-role{font:13px 'IBM Plex Mono',monospace;color:#666;margin:0 0 35px}.academic .profile-content>p:not(.kicker):not(.profile-role){font-size:18px;line-height:2;margin:0 0 18px}.academic .profile-meta{border-top:1px solid #ddd;margin-top:42px;padding-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.academic .profile-meta span{font:11px 'IBM Plex Mono',monospace;color:#777}.academic .profile-meta p{font-size:14px;margin:4px 0 0}
+.academic header{position:sticky;top:0;z-index:10;margin:0 -18px;padding:17px 18px;background:rgba(255,255,255,.94);border-bottom:1px solid #ddd;backdrop-filter:blur(8px)}
+.academic header>a{display:none}.academic header{justify-content:flex-end}
+.academic header nav{display:flex;gap:18px}.academic header nav a{font:12px 'IBM Plex Mono',monospace;color:#555;text-decoration:none}.academic header nav a:hover{color:#111;text-decoration:underline;text-underline-offset:4px}
+.academic header nav a.active{color:#111;text-decoration:underline;text-underline-offset:4px}
+.academic .lang-toggle{border:0;border-left:1px solid #ddd;margin-left:3px;padding:0 0 0 13px;background:transparent;color:#555;font:12px 'IBM Plex Mono',monospace;cursor:pointer}.academic .lang-toggle:hover{color:#111}
+.academic header a,.academic .links a,.academic article a,.academic .note a,.academic #contact a,.academic footer a{color:inherit;text-decoration-color:#aaa;text-underline-offset:3px}
+.academic .now-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:15px 0}.academic .now-grid p{margin:0;font-size:14px}.academic .now-grid span{display:block;color:#777;font:11px 'IBM Plex Mono',monospace;margin-bottom:5px}
+@media(max-width:620px){.academic header{margin:0 -18px;padding:14px 18px}.academic header nav{display:flex;gap:12px;overflow-x:auto;white-space:nowrap}.academic header nav a{font-size:10px}.academic .now-grid{grid-template-columns:1fr;gap:14px}.academic .profile-page{grid-template-columns:1fr;gap:42px;padding:48px 0}.academic .photo-placeholder{width:175px}.academic .profile-links{margin-top:24px}.academic .profile-content>p:not(.kicker):not(.profile-role){font-size:16px}.academic .profile-meta{grid-template-columns:1fr;gap:14px}}
+.academic .profile-side{display:flex;flex-direction:column;align-items:center}.academic .photo-placeholder{background:#efede6 url('assets/pancheng-niu-avatar.png') center/cover no-repeat}.academic .photo-placeholder span{display:none}.academic .profile-links{width:220px;margin-top:8px}.academic .profile-links a{display:flex;justify-content:center}
+.academic .profile-links .cv-placeholder{display:flex;justify-content:center;color:#999;font-size:14px}
+.academic .profile-links .email-icon{display:inline-grid;place-items:center;width:21px;height:21px;font-size:18px;line-height:1;margin-right:7px}
+.academic main{max-width:1400px}
+.academic .page-section>p:not(.kicker):not(.note),.academic .page-section .now-grid,.academic .page-section article{max-width:1100px}.academic .profile-content{max-width:900px}
