@@ -148,7 +148,8 @@ body.academic:has(.home-intro) .home-intro>div .profile-role{display:none}
 /* Keep the homepage introduction and actions on the same right-hand rhythm as research entries. */
 @media(min-width:901px){
   body.academic:has(.home-intro) .home-intro>div .home-copy{
-    max-width:calc(100% - 80px);
+    margin-left:205px;
+    max-width:calc(100% - 205px);
   }
   body.academic:has(.home-intro) .home-now-preview>.home-more{
     margin-right:80px;
