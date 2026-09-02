@@ -148,10 +148,11 @@ body.academic:has(.home-intro) .home-intro>div .profile-role{display:none}
 /* Keep the homepage introduction and actions on the same right-hand rhythm as research entries. */
 @media(min-width:901px){
   body.academic:has(.home-intro) .home-intro>div .home-copy{
-    margin-left:205px;
-    max-width:calc(100% - 205px);
+    margin-left:0;
+    max-width:none;
   }
+  body.academic:has(.home-intro) .home-now-preview>p{margin-left:0;}
   body.academic:has(.home-intro) .home-now-preview>.home-more{
-    margin-right:80px;
+    margin-right:0;
   }
 }
