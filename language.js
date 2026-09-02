@@ -80,8 +80,8 @@
     document.querySelectorAll('.home-section').forEach((section) => section.classList.add('home-preview'));
   }
   const affiliation = chinese
-    ? '硕士研究生 · 成都信息工程大学应用数学学院'
-    : 'Master’s Student · School of Applied Mathematics, Chengdu University of Information Technology';
+    ? '成都信息工程大学应用数学学院'
+    : 'School of Applied Mathematics · Chengdu University of Information Technology';
   document.querySelectorAll('.role, .profile-role').forEach((item) => { item.textContent = affiliation; });
   document.querySelectorAll('a').forEach((link) => {
     if (link.textContent.includes('GitHub')) {
@@ -103,7 +103,7 @@
   if (homeAside && !homeAside.querySelector('.home-sidebar-info')) {
     const info = document.createElement('div');
     info.className = 'home-sidebar-info';
-    info.innerHTML = `<strong>Pancheng Niu</strong><span>${chinese ? '硕士研究生' : 'Master’s Student'}</span><span>${chinese ? '成都信息工程大学应用数学学院' : 'School of Applied Mathematics<br>Chengdu University of Information Technology'}</span>`;
+    info.innerHTML = `<strong>Pancheng Niu</strong><span>${chinese ? '成都信息工程大学应用数学学院' : 'School of Applied Mathematics<br>Chengdu University of Information Technology'}</span>`;
     const avatar = homeAside.querySelector('.home-avatar');
     if (avatar) avatar.insertAdjacentElement('afterend', info);
   }
