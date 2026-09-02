@@ -144,3 +144,13 @@ body.academic:has(.home-intro) .home-intro>div .profile-role{display:none}
   .academic .home-section>article{grid-template-columns:82px minmax(0,1fr)!important;column-gap:14px!important}
   .academic .home-now-preview>p,.academic .home-news>p{grid-template-columns:82px minmax(0,1fr)!important;column-gap:14px!important}
 }
+
+/* Keep the homepage introduction and actions on the same right-hand rhythm as research entries. */
+@media(min-width:901px){
+  body.academic:has(.home-intro) .home-intro>div .home-copy{
+    max-width:calc(100% - 80px);
+  }
+  body.academic:has(.home-intro) .home-now-preview>.home-more{
+    margin-right:80px;
+  }
+}
